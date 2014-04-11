@@ -1,0 +1,30 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index
+GET		/some						controllers.Foursquare.some
+GET		/redirect					controllers.Foursquare.redirectGet(code: String)
+GET		/handle_push				controllers.Foursquare.handlePush
+POST	/redirect					controllers.Foursquare.redirectPost
+POST	/handle_push				controllers.Foursquare.handlePush
+GET		/redirect/					controllers.Foursquare.redirectGet(code: String)
+GET		/handle_push/				controllers.Foursquare.handlePush
+POST	/redirect/					controllers.Foursquare.redirectPost
+POST	/handle_push/				controllers.Foursquare.handlePush
+GET		/sendToken					controllers.Foursquare.sendToken(token: String)
+GET		/sendToken/					controllers.Foursquare.sendToken(token: String)
+GET		/getUser					controllers.Foursquare.getUserGet(username: String)
+GET		/getUser/					controllers.Foursquare.getUserGet(username: String)
+GET		/doBattle					controllers.Foursquare.doBattle(userId: Int, enemyId: Int, battleType)
+GET		/doBattle/					controllers.Foursquare.doBattle(userId: Int, enemyId: Int, battleType)
+GET		/getEnemy					controllers.Foursquare.getEnemyGet(id: Int)
+GET		/getEnemy/					controllers.Foursquare.getEnemyGet(id: Int)
+GET		/getBattleInfo				controllers.Foursquare.getBattleInfo(userId: Int, enemyId: Int)
+GET		/getBattleInfo/				controllers.Foursquare.getBattleInfo(userId: Int, enemyId: Int)
+
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
